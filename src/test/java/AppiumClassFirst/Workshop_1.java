@@ -25,8 +25,13 @@ public class Workshop_1 {
 
         AndroidDriver<AndroidElement> driver = new AndroidDriver<>(new URL("http:127.0.0.1:4723/wd/hub"), desiredCapabilities);
 
-        Thread.sleep(5000);
+        WebElement getStart = driver.findElementById("com.duolingo:id/introFlowNewUserButton");
+        String yazi = getStart.getText();
+        System.out.println("yazi = " + yazi);
+        getStart.click();
 
+        Thread.sleep(5000);
+/*
         WebElement getStarterd = driver.findElementById("com.duolingo:id/introFlowNewUserButton");
         getStarterd.click();
         Thread.sleep(3000);
@@ -48,7 +53,7 @@ public class Workshop_1 {
         Thread.sleep(4000);
         WebElement getStartTest = driver.findElementById("com.duolingo:id/primaryButton");
         getStartTest.click();
-
+*/
     }
 }
 
